@@ -1,6 +1,6 @@
 <?php
 session_start();
 session_destroy();
-header('Location: /todo-list-app/auth/login.php');
+header('Location: /lislty/auth/login.php');
 exit();
 ?>
