@@ -3,7 +3,7 @@ require_once __DIR__ . '/../config/db.php';
 
 function checkAuth($required_role = null) {
     if (!isset($_SESSION['user_id'])) {
-        header('Location: /lislty/auth/login.php');
+        header('Location: /todo-list-app/auth/login.php');
         exit();
     }
     
@@ -14,7 +14,7 @@ function checkAuth($required_role = null) {
         $user = $stmt->fetch();
         
         if (!$user || $user['nama_role'] !== $required_role) {
-            header('Location: /lislty/');
+            header('Location: /todo-list-app/');
             exit();
         }
     }

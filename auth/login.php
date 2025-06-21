@@ -24,9 +24,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             
             // Redirect based on role
             if ($user['nama_role'] == 'admin') {
-                header('Location: /lislty/admin/');
+                header('Location: /todo-list-app/admin/');
             } else {
-                header('Location: /lislty/user/');
+                header('Location: /todo-list-app/user/');
             }
             exit();
         } else {

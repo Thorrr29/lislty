@@ -3,7 +3,7 @@ require_once __DIR__ . '/../config/db.php';
 
 // Check if user is logged in
 if (!isset($_SESSION['user_id'])) {
-    header('Location: /lislty/auth/login.php');
+    header('Location: /todo-list-app/auth/login.php');
     exit();
 }
 
@@ -14,7 +14,7 @@ $user = $stmt->fetch();
 
 if (!$user) {
     session_destroy();
-    header('Location: /lislty/auth/login.php');
+    header('Location: /todo-list-app/auth/login.php');
     exit();
 }
 
@@ -30,7 +30,7 @@ $current_dir = basename(dirname($_SERVER['PHP_SELF']));
     <title><?php echo isset($page_title) ? $page_title . ' - ' : ''; ?>Listly</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="/lislty/assets/css/style.css" rel="stylesheet">
+    <link href="/todo-list-app/assets/css/style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -41,7 +41,7 @@ $current_dir = basename(dirname($_SERVER['PHP_SELF']));
         <div class="container-fluid px-3 px-lg-4">
             <!-- Brand Section -->
             <div class="navbar-brand-wrapper">
-                <a class="navbar-brand modern-brand" href="/lislty/">
+                <a class="navbar-brand modern-brand" href="/todo-list-app/">
                     <div class="brand-icon">
                         <i class="fas fa-check-circle"></i>
                     </div>
@@ -64,7 +64,7 @@ $current_dir = basename(dirname($_SERVER['PHP_SELF']));
                     <?php if ($user['nama_role'] == 'admin'): ?>
                         <li class="nav-item">
                             <a class="nav-link modern-nav-link <?php echo ($current_dir == 'admin' && $current_page == 'index.php') ? 'active' : ''; ?>" 
-                               href="/lislty/admin/">
+                               href="/todo-list-app/admin/">
                                 <i class="fas fa-tachometer-alt nav-icon"></i>
                                 <span class="nav-text">Dashboard</span>
                             </a>
@@ -80,26 +80,26 @@ $current_dir = basename(dirname($_SERVER['PHP_SELF']));
                                 <li><hr class="dropdown-divider"></li>
                                 <li>
                                     <a class="dropdown-item modern-dropdown-item <?php echo $current_dir == 'kategori' ? 'active' : ''; ?>" 
-                                       href="/lislty/admin/kategori/">
+                                       href="/todo-list-app/admin/kategori/">
                                         <i class="fas fa-tags me-2"></i>Kategori
                                     </a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item modern-dropdown-item <?php echo $current_dir == 'prioritas' ? 'active' : ''; ?>" 
-                                       href="/lislty/admin/prioritas/">
+                                       href="/todo-list-app/admin/prioritas/">
                                         <i class="fas fa-exclamation-triangle me-2"></i>Prioritas
                                     </a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item modern-dropdown-item <?php echo $current_dir == 'status' ? 'active' : ''; ?>" 
-                                       href="/lislty/admin/status/">
+                                       href="/todo-list-app/admin/status/">
                                         <i class="fas fa-flag me-2"></i>Status
                                     </a>
                                 </li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li>
                                     <a class="dropdown-item modern-dropdown-item <?php echo $current_dir == 'pengguna' ? 'active' : ''; ?>" 
-                                       href="/lislty/admin/pengguna/">
+                                       href="/todo-list-app/admin/pengguna/">
                                         <i class="fas fa-users me-2"></i>Pengguna
                                     </a>
                                 </li>
@@ -108,14 +108,14 @@ $current_dir = basename(dirname($_SERVER['PHP_SELF']));
                     <?php else: ?>
                         <li class="nav-item">
                             <a class="nav-link modern-nav-link <?php echo ($current_dir == 'user' && $current_page == 'index.php') ? 'active' : ''; ?>" 
-                               href="/lislty/user/">
+                               href="/todo-list-app/user/">
                                 <i class="fas fa-home nav-icon"></i>
                                 <span class="nav-text">Dashboard</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link modern-nav-link <?php echo $current_dir == 'tugas' ? 'active' : ''; ?>" 
-                               href="/lislty/user/tugas/">
+                               href="/todo-list-app/user/tugas/">
                                 <i class="fas fa-list-check nav-icon"></i>
                                 <span class="nav-text">Tugas Saya</span>
                             </a>
@@ -162,7 +162,7 @@ $current_dir = basename(dirname($_SERVER['PHP_SELF']));
                             </li>
                             <li><hr class="dropdown-divider"></li>
                             <li>
-                                <a class="dropdown-item modern-dropdown-item logout-item" href="/lislty/auth/logout.php">
+                                <a class="dropdown-item modern-dropdown-item logout-item" href="/todo-list-app/auth/logout.php">
                                     <i class="fas fa-sign-out-alt me-2"></i>Logout
                                 </a>
                             </li>

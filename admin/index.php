@@ -140,7 +140,7 @@ require_once '../includes/header.php';
         <div class="card">
             <div class="card-header d-flex justify-content-between align-items-center">
                 <h5 class="mb-0"><i class="fas fa-user-clock me-2"></i>Pengguna Terbaru</h5>
-                <a href="/lislty/admin/pengguna/" class="btn btn-sm btn-outline-primary">Lihat Semua</a>
+                <a href="/todo-list-app/admin/pengguna/" class="btn btn-sm btn-outline-primary">Lihat Semua</a>
             </div>
             <div class="card-body">
                 <?php if (empty($recent_users)): ?>
@@ -177,22 +177,22 @@ require_once '../includes/header.php';
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-3 mb-2">
-                        <a href="/lislty/admin/kategori/tambah.php" class="btn btn-outline-primary w-100">
+                        <a href="/todo-list-app/admin/kategori/tambah.php" class="btn btn-outline-primary w-100">
                             <i class="fas fa-plus me-2"></i>Tambah Kategori
                         </a>
                     </div>
                     <div class="col-md-3 mb-2">
-                        <a href="/lislty/admin/prioritas/tambah.php" class="btn btn-outline-success w-100">
+                        <a href="/todo-list-app/admin/prioritas/tambah.php" class="btn btn-outline-success w-100">
                             <i class="fas fa-plus me-2"></i>Tambah Prioritas
                         </a>
                     </div>
                     <div class="col-md-3 mb-2">
-                        <a href="/lislty/admin/status/tambah.php" class="btn btn-outline-warning w-100">
+                        <a href="/todo-list-app/admin/status/tambah.php" class="btn btn-outline-warning w-100">
                             <i class="fas fa-plus me-2"></i>Tambah Status
                         </a>
                     </div>
                     <div class="col-md-3 mb-2">
-                        <a href="/lislty/admin/pengguna/tambah.php" class="btn btn-outline-info w-100">
+                        <a href="/todo-list-app/admin/pengguna/tambah.php" class="btn btn-outline-info w-100">
                             <i class="fas fa-plus me-2"></i>Tambah Pengguna
                         </a>
                     </div>

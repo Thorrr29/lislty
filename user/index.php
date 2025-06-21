@@ -132,7 +132,7 @@ require_once '../includes/header.php';
         <div class="card">
             <div class="card-header d-flex justify-content-between align-items-center">
                 <h5 class="mb-0"><i class="fas fa-clock me-2"></i>Tugas Terbaru</h5>
-                <a href="/lislty/user/tugas/" class="btn btn-sm btn-outline-primary">Lihat Semua</a>
+                <a href="/todo-list-app/user/tugas/" class="btn btn-sm btn-outline-primary">Lihat Semua</a>
             </div>
             <div class="card-body">
                 <?php if (empty($recent_tasks)): ?>
@@ -187,17 +187,17 @@ require_once '../includes/header.php';
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-4 mb-2">
-                        <a href="/lislty/user/tugas/tambah.php" class="btn btn-primary w-100">
+                        <a href="/todo-list-app/user/tugas/tambah.php" class="btn btn-primary w-100">
                             <i class="fas fa-plus me-2"></i>Tambah Tugas Baru
                         </a>
                     </div>
                     <div class="col-md-4 mb-2">
-                        <a href="/lislty/user/tugas/?status=pending" class="btn btn-outline-warning w-100">
+                        <a href="/todo-list-app/user/tugas/?status=pending" class="btn btn-outline-warning w-100">
                             <i class="fas fa-clock me-2"></i>Lihat Tugas Pending
                         </a>
                     </div>
                     <div class="col-md-4 mb-2">
-                        <a href="/lislty/user/tugas/?status=overdue" class="btn btn-outline-danger w-100">
+                        <a href="/todo-list-app/user/tugas/?status=overdue" class="btn btn-outline-danger w-100">
                             <i class="fas fa-exclamation-triangle me-2"></i>Lihat Tugas Terlambat
                         </a>
                     </div>
